@@ -14,21 +14,103 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- nav -->
+    <nav class="p-3 mb-2 bg-warning-subtle text-warning-emphasis">
+        <div class="container">
+            <div class="d-flex justify-content-start align-items-center">
+                <svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-collection-play" viewBox="0 0 16 16">
+                    <path d="M2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1m2.765 5.576A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848z"/>
+                    <path d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5zm13-1a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5h-13A.5.5 0 0 0 1 6v7a.5.5 0 0 0 .5.5z"/>
+                </svg>
+                <a href="#"></a>
+                <span class="fw-bold">영화 감상평</span>
+                <!-- 이동 주소에는 각자 설정한 주소 지정이 필요하여 현재 공백 -->
+                <a class="nav-link ms-4" href="#movie-top">영화 소개</a>
+                <a class="nav-link ms-3" href="#accordionExample">영화 리뷰</a>
+                <a class="nav-link ms-3 me-3" href="#review-regist">리뷰 등록</a>
+                <div class="nav_channel">
+                    <ul class="d-flex justify-content-end align-items-center">
+                        <!-- 왓챠 피디아 -->
+                        <li><a href="https://pedia.watcha.com/ko-KR/contents/m5ekxEM" class="channel_icon1 bg" target="_blank"></a></li>
+                        <!-- 유튜브 -->
+                        <li><a href="https://www.youtube.com/watch?v=J8qqMLZPPTo" class="bg channel_icon2" target="_blank"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="movie-top container mt-4 mb-4" id="movie_poster">
+      <div class="moive-data">
+        <h2 class="mb-4">영화 소개</h2>
+    
+        <div class="poster-wrapper">
+          <div>
+              <h5 class="m-1">승부</h5>
+              <p class="mb-1 mt-2">드라마, 스포츠, 시대극</p>
+            </div>
+          <img src="images/poster3.png" alt="영화 포스터" class="poster">
+        </div>
+    
+        <!-- 영화 정보는 이미지 아래로 배치 -->
+        <div class="moive-info">
+          <div class="movie-info-first mt-1">
+            <div class="moive-data1">
+              <span class="text-secondary">개요</span> 드라마 <a>·</a> 115분
+            </div>
+            <div class="movie-data2">
+              <span class="text-secondary">개봉</span> 2025.03.26
+            </div>
+          </div>
+    
+          <!-- 영화 소개글 -->
+          <div class="movie-description mt-3">
+            <p>
+              바둑계의 전설들이 맞붙는 숨 막히는 승부의 세계...<br>
+              이 영화는 열정과 집념으로 가득 찬 두 천재의 인생 이야기를 담고 있습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--// accordion S -->
+  <section class="container mb-4">
+    <h2 class="mb-3">감상평 목록</h2>
+      <div class="accordion" id="review-items"></div>
+
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              리뷰 내용 #1
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--// accordion-->
+
+  
     <div class="container">
-        <h2>리뷰 등록</h2>
+        <h2 class="mb-2">리뷰 등록</h2>
         <form id="review-regist" name="frmRegist" autocomplete="off" class="mb5">
             <div class="mb-3">
-                <label for="review-regist" class="form-label">리뷰 등록</label> 
-                <textarea class="form-control" id="review" rows="5"></textarea>
+                <label for="review-title" class='form-label'>제목</label>
+                <input type="text" id="review-title" name="title" class="form-control" placeholder="제목을 입력하세요.">
             </div>
             <div class="mb-3">
-                <div id="review" class="border"></div>
-                <div style="border: 50px" height="50px" width="50px">
-                </div>
+                <label for="review-regist" class="form-label">리뷰 내용</label> 
+                <textarea name="content" id="review-content" class="form-control" placeholder="내용을 입력하세요."></textarea>
             </div>
         </form>
     </div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mb-4">
         <button type="submit" class="btn btn-success">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5"/>
@@ -37,6 +119,5 @@
             등록하기
         </button>
     </div>
-    </form>
 </body>
 </html>
