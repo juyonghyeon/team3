@@ -1,3 +1,4 @@
+/* 공통 초기화 S */
 ul, ol{
     list-style: none;
     margin: 0;
@@ -14,12 +15,14 @@ ul, ol{
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin: 0;
-  }
+}
 
-  p {
+p{
       margin: 0;
-  }
+}
   
+/* 공통 초기화 E */
+
   /* 포스터 영역 */
   .movie-top {
     text-align: center;
@@ -55,6 +58,8 @@ ul, ol{
     background-color: #fff3cd;
   }
 
+/* nav s */
+
 .container {
     max-width: 800px;
     min-width: 350px;
@@ -78,8 +83,13 @@ ul, ol{
     background-image: url(../images/Youtube_icon.png);
 }
 
+/* nav E */
+
+/* review save S */
+
 #review-content {
     height: 150px;
     border-radius: 5px;
   }
 
+/* review save E */
