@@ -11,6 +11,50 @@ ul, ol{
     background-position: center 0;
 }
 
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  
+  
+  p {
+      margin: 0;
+  }
+  
+  /* 포스터 영역 */
+  .movie-top {
+    text-align: center;
+  }
+  .movie-top h2 {
+    text-align: left;
+  }
+  
+  .poster-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-left: 0;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.6);
+      align-items: center;
+      line-height: 100%;
+      text-align: center;
+  }
+  
+  .poster {
+      width: 500px;
+      height: auto;
+      display: block;
+  }
+  
+  
+  .movie-description {
+      font-size: 1rem;
+      line-height: 1.6;
+  }
+  
+  .moive-info {
+    background-color: #fff3cd;
+    
 .container {
     max-width: 800px;
     min-width: 350px;
