@@ -1,0 +1,12 @@
+#review {
+    height: 300px;
+    border-radius: 5px;
+  }
+.container {
+    max-width: 800px;
+    min-width: 350px;
+}
+html {
+    font-size: 20
+}
+
