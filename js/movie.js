@@ -132,5 +132,9 @@ function(){
         }
 
         movie.add(item)
+
+        frmRegist.date.value = '';
+        frmRegist.title.value = '';
+        quill.root.innerHTML = '';
     });
 });
