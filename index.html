@@ -2,10 +2,34 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.bubble.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+    <script src="js/movie.js"></script>
     <title>영화 감상평</title>
+    <link rel="shortcut icon" href="images/shortcutIcon.png">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <!-- nav -->
+    <nav class="p-3 mb-2 bg-warning-subtle text-warning-emphasis">
+        <div class="container">
+            <div class="d-flex justify-content-start align-items-center">
+                <svg class="me-3" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-collection-play" viewBox="0 0 16 16">
+                    <path d="M2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1m2.765 5.576A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848z"/>
+                    <path d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5zm13-1a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5h-13A.5.5 0 0 0 1 6v7a.5.5 0 0 0 .5.5z"/>
+                </svg>
+                <a href="#"></a>
+                <span class="fw-bold">영화 감상평</span>
+                <!-- 이동 주소에는 각자 설정한 주소 지정이 필요하여 현재 공백 -->
+                <a class="nav-link ms-4" href="#">영화 소개</a>
+                <a class="nav-link ms-3" href="#">영화 리뷰</a>
+                <a class="nav-link ms-3" href="#">리뷰 등록</a>
+            </div>
+        </div>
+    </nav>
 </body>
 </html>
