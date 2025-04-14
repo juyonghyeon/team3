@@ -20,8 +20,7 @@ const movie = {
     // 삭제 처리
     add(item) {
 
-        this.items.push(item);
-        console.log(this.items);
+        this.items.unshift(item);
         this.render();
         this.save();
 
