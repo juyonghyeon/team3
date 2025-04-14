@@ -67,7 +67,7 @@ const movie = {
                 let html = movie.accordionId
 
                 html = html.replace(/#{seq}/g, seq)
-                           .replace(/{#title}/g,title)
+                           .replace(/#{title}/g,title)
                            .replace(/#{content}/g,content);
                 const dom = domParser.parseFromString(html, "text/html");
                 const el = dom.querySelector(".accordion-item");
