@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', function(){
     };
 
     if(errorEls.length > 0){
-
+        errorEls.forEach((errorEl) => errorEl.parentElement.removeChild(errorEl))
     }
 
     for(const[field, message] of Object.entries(reviewFields)){
@@ -38,5 +38,7 @@ window.addEventListener('DOMContentLoaded', function(){
                 frmRegist.prepend(errorEl)
             })
         }
+
+        //initialMovie.add(item)
     });
 });
