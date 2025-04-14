@@ -1,7 +1,17 @@
 const movie = {
     items: [], // 감상평 목록
     tpl: null, // 감상편 목록을 추가할때 사용할 템플릿
+    add(item) {
 
+        this.item.push(item);
+
+        this.items((i1,i2) =>{
+        const data1 = new Date(i1.data);
+        const data2 = new Date(i2.date);
+        console.log(date2.getTime() - date1.getTime());
+        return date2.getTime() - date1.getTime();
+        });
+     },
     // 템플릿 가져오기
 
     init() {
