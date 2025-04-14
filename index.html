@@ -39,7 +39,7 @@
             </div>
         </div>
     </nav>
-    <section class="movie-top mt-4" id="movie_poster">
+    <section class="movie-top container mt-4 mb-4" id="movie_poster">
       <div class="moive-data">
         <h2 class="mb-4">영화 소개</h2>
     
@@ -73,11 +73,12 @@
       </div>
     </section>
 
-    <h2>감상평 목록</h2>
-    <div class="accordion" id="review-items"></div>
-    <!--// accordion-->
+    <!--// accordion S -->
+  <section class="container mb-4">
+    <h2 class="mb-3">감상평 목록</h2>
+      <div class="accordion" id="review-items"></div>
 
-    <div class="accordion" id="accordionExample">
+      <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -90,18 +91,17 @@
             </div>
           </div>
         </div>
-            </div>
-          </div>
-        </div>
+      </div>
+    </section>
 
     <!--// accordion-->
 
   
     <div class="container">
-        <h2>리뷰 등록</h2>
+        <h2 class="mb-2">리뷰 등록</h2>
         <form id="review-regist" name="frmRegist" autocomplete="off" class="mb5">
             <div class="mb-3">
-                <label for="review-regist" class="form-label">리뷰 등록</label> 
+                <label for="review-regist" class="form-label">리뷰 내용</label> 
                 <textarea class="form-control" id="review" rows="5"></textarea>
             </div>
             <div class="mb-3">
