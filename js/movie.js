@@ -72,7 +72,6 @@ const movie = {
 
 
 }
-
 const item = [];
 
 window.addEventListener('DOMContentLoaded', function(){
