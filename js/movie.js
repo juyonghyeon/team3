@@ -1,19 +1,8 @@
 const movie = {
     items: [], // 감상평 목록
     tpl: null, // 감상편 목록을 추가할때 사용할 템플릿
-    add(item) {
 
-        this.item.push(item);
-
-        this.items((i1,i2) =>{
-        const data1 = new Date(i1.data);
-        const data2 = new Date(i2.date);
-        console.log(date2.getTime() - date1.getTime());
-        return date2.getTime() - date1.getTime();
-        });
-     },
     // 템플릿 가져오기
-
     init() {
         this.accordionId = document.getElementById("accordionId").innerHTML;
 
@@ -27,16 +16,31 @@ const movie = {
         this.render();
     },
 
-    // 저장 처리
+
+    // 삭제 처리
+    add(item) {
+
+        this.items.push(item);
+        console.log(this.items);
+        this.render();
+        this.save();
+
+    },
 
 
     // 삭제 처리
-
+    remove(seq) {
+        const index = this.items.findIndex(item => item.seq === seq);
+        if (index === -1) return;
+        this.items.splice(index, 1);
+        this.render();
+        this.save();
+    },
 
     // render 정의
 
     render() {
-        const targetEl = document.getElementById("accordionExample");
+        const targetEl = document.getElementById("review-items");
         const domParser = new DOMParser();
 
         targetEl.innerHTML = `
@@ -60,7 +64,7 @@ const movie = {
         setTimeout(() => {
             targetEl.innerHTML = '';
             this.items.forEach(({seq,title,content}) => {
-                let html = initialMovie.accordionId
+                let html = movie.accordionId
 
                 html = html.replace(/#{seq}/g, seq)
                            .replace(/{#title}/g,title)
@@ -79,12 +83,16 @@ const movie = {
             });
         }, 1500);
     },
-
+    save() {
+        const data = JSON.stringify(this.items);
+        localStorage.setItem("movies", data);
+    }
 
 }
 const item = [];
-
-window.addEventListener('DOMContentLoaded', function(){
+window.addEventListener('DOMContentLoaded', 
+function(){
+    movie.init();
     frmRegist.addEventListener('submit', function(e){
         e.preventDefault();
 
@@ -106,7 +114,7 @@ window.addEventListener('DOMContentLoaded', function(){
             if(!value){
                 error.push(message);
                 console.log(error);
-            }else{
+            } else {
                 item[field] = value;
             }
         }
@@ -123,6 +131,6 @@ window.addEventListener('DOMContentLoaded', function(){
             })
         }
 
-        initialMovie.add(item)
+        movie.add(item)
     });
 });
