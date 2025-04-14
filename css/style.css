@@ -16,8 +16,6 @@ ul, ol{
     margin: 0;
   }
 
-  
-  
   p {
       margin: 0;
   }
@@ -56,6 +54,7 @@ ul, ol{
   .moive-info {
     background-color: #fff3cd;
   }
+
 .container {
     max-width: 800px;
     min-width: 350px;
@@ -78,3 +77,9 @@ ul, ol{
 .nav_channel ul li .channel_icon2{
     background-image: url(../images/Youtube_icon.png);
 }
+
+#review-content {
+    height: 150px;
+    border-radius: 5px;
+  }
+
