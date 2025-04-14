@@ -26,7 +26,7 @@ ul, ol{
     text-align: center;
   }
   .movie-top h2 {
-    text-align: left;
+    text-align: center;
   }
   
   .poster-wrapper {
@@ -41,7 +41,7 @@ ul, ol{
   }
   
   .poster {
-      width: 500px;
+      width: 100%;
       height: auto;
       display: block;
   }
@@ -54,7 +54,7 @@ ul, ol{
   
   .moive-info {
     background-color: #fff3cd;
-    
+  }
 .container {
     max-width: 800px;
     min-width: 350px;
