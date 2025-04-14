@@ -15,12 +15,7 @@ ul, ol{
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
-
-h2 {
-
-}
-  
-  
+ 
   p {
       margin: 0;
   }
@@ -59,6 +54,7 @@ h2 {
   .moive-info {
     background-color: #fff3cd;
   }
+
 .container {
     max-width: 800px;
     min-width: 350px;
@@ -81,3 +77,8 @@ h2 {
 .nav_channel ul li .channel_icon2{
     background-image: url(../images/Youtube_icon.png);
 }
+
+#review-content {
+    height: 150px;
+    border-radius: 5px;
+  }
