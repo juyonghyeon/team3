@@ -84,13 +84,14 @@
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne#{seq}" aria-expanded="true" aria-controls="collapseOne#{seq}">
                 리뷰 내용 #1
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="collapseOne#{seq}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                <button type="button" class="btn btn-danger btn-sm remove">삭제</button>
               </div>
             </div>
           </div>
@@ -110,7 +111,7 @@
             </div>
             <div class="mb-3">
                 <label for="review-regist" class="form-label">리뷰 내용</label> 
-                <input type="text" name="content" id="review-content" class="form-control" placeholder="내용을 입력하세요.">
+                <textarea name="content" id="review-content" class="form-control" placeholder="내용을 입력하세요."></textarea>
             </div>
             <div class="d-flex justify-content-center mb-4">
                 <button type="submit" class="btn btn-success">
