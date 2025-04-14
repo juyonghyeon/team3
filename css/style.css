@@ -60,6 +60,14 @@ p{
 
 /* nav s */
 
+nav{
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%,0);
+    z-index: 999;
+}
+
 .container {
     max-width: 800px;
     min-width: 350px;
@@ -81,6 +89,10 @@ p{
 }
 .nav_channel ul li .channel_icon2{
     background-image: url(../images/Youtube_icon.png);
+}
+
+.nav_blank{
+    height: 75px;
 }
 
 /* nav E */

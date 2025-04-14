@@ -90,16 +90,17 @@ const movie = {
 
 }
 
-window.addEventListener('DOMContentLoaded', 
-function(){
+window.addEventListener('DOMContentLoaded', function(){
+    
     movie.init();
+
     frmRegist.addEventListener('submit', function(e){
         e.preventDefault();
 
-        const item = {};
+    const item = {};
 
-        item.seq = Date.now();
-        item.date = new Date().toLocaleDateString();
+    item.seq = Date.now();
+    item.date = new Date().toLocaleDateString();
 
         
 

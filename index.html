@@ -25,7 +25,7 @@
                 <a href="#"></a>
                 <span class="fw-bold">영화 감상평</span>
                 <!-- 이동 주소에는 각자 설정한 주소 지정이 필요하여 현재 공백 -->
-                <a class="nav-link ms-4" href="#movie-top">영화 소개</a>
+                <a class="nav-link ms-4" href="#movie_poster">영화 소개</a>
                 <a class="nav-link ms-3" href="#review-items">영화 리뷰</a>
                 <a class="nav-link ms-3 me-3" href="#review-regist">리뷰 등록</a>
                 <div class="nav_channel">
@@ -39,6 +39,11 @@
             </div>
         </div>
     </nav>
+
+    <div class="nav_blank"></div>
+
+    <!-- nav E -->
+
     <section class="movie-top container mt-4 mb-4" id="movie_poster">
       <div class="moive-data">
         <h2 class="mb-4">영화 소개</h2>
@@ -80,7 +85,6 @@
       <div class="accordion" id="review-items"></div>
 
       <script type="text/html" id="accordionId">
-        <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne#{seq}" aria-expanded="true" aria-controls="collapseOne#{seq}">
@@ -97,7 +101,6 @@
               </div>
             </div>
           </div>
-        </div>
       </script>
     </section>
 
