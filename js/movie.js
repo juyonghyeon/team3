@@ -89,12 +89,14 @@ const movie = {
     }
 
 }
-const item = [];
+
 window.addEventListener('DOMContentLoaded', 
 function(){
     movie.init();
     frmRegist.addEventListener('submit', function(e){
         e.preventDefault();
+
+        const item = {};
 
     /* 유효성 검사 */
     let errorEls = frmRegist.querySelectorAll('.alert')
@@ -133,8 +135,7 @@ function(){
 
         movie.add(item)
 
-        frmRegist.date.value = '';
         frmRegist.title.value = '';
-        quill.root.innerHTML = '';
+        frmRegist.content.value = '';
     });
 });
