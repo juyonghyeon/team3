@@ -20,8 +20,7 @@ const movie = {
     // 삭제 처리
     add(item) {
 
-        this.items.push(item);
-        console.log(this.items);
+        this.items.unshift(item);
         this.render();
         this.save();
 
@@ -63,12 +62,13 @@ const movie = {
 
         setTimeout(() => {
             targetEl.innerHTML = '';
-            this.items.forEach(({seq,title,content}) => {
+            this.items.forEach(({seq,title,content, date}) => {
                 let html = movie.accordionId
 
                 html = html.replace(/#{seq}/g, seq)
                            .replace(/#{title}/g,title)
-                           .replace(/#{content}/g,content);
+                           .replace(/#{content}/g,content)
+                           .replace(/#{date}/g, date);
                 const dom = domParser.parseFromString(html, "text/html");
                 const el = dom.querySelector(".accordion-item");
                 targetEl.append(el);
@@ -97,6 +97,11 @@ function(){
         e.preventDefault();
 
         const item = {};
+
+        item.seq = Date.now();
+        item.date = new Date().toLocaleDateString();
+
+        
 
     /* 유효성 검사 */
     let errorEls = frmRegist.querySelectorAll('.alert')
@@ -130,7 +135,8 @@ function(){
                 errorEl.append(`${m}`)
                 console.log(errorEl);
                 frmRegist.prepend(errorEl)
-            })
+            });
+            return;
         }
 
         movie.add(item)
