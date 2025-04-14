@@ -20,6 +20,10 @@ ul, ol{
 p{
       margin: 0;
 }
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+  }
   
 /* 공통 초기화 E */
 
@@ -27,6 +31,7 @@ p{
   .movie-top {
     text-align: center;
   }
+
   .movie-top h2 {
     text-align: left;
   }
@@ -56,6 +61,7 @@ p{
   
   .moive-info {
     background-color: #fff3cd;
+    border-radius: 5px;
   }
 
 /* nav s */
