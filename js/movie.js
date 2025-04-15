@@ -17,7 +17,7 @@ const movie = {
     },
 
 
-    // 삭제 처리
+    // 추가 처리
     add(item) {
 
         this.items.unshift(item);
